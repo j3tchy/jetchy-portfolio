@@ -26,13 +26,21 @@ var config = {
                         'sass-loader'
                     ]
                 })
+            },{
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        'css-loader'
+                    ]
+                })
             }
         ]
     },
     plugins: [
         new ExtractTextPlugin('css/style.css'),
         new HtmlWebpackPlugin({
-            title: 'Development',
+            title: 'Jermaine Gyekye | Portfolio',
             template: 'app/index.html'
         })
     ]
