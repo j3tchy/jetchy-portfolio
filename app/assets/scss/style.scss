@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
 
 $screen-min-sm: 'screen (min-width: 768px)';
 $screen-min-md: 'screen (min-width: 1024px)';
 $screen-min-lg: 'screen (min-width: 1360px)';
+
+$header-font: 'Anton', sans-serif;
 
 *,
 *:before,
@@ -12,7 +15,9 @@ $screen-min-lg: 'screen (min-width: 1360px)';
 body {
     margin: 0;
     padding: 0;
-    line-height: 22px; 
+    line-height: 22px;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3 {
@@ -20,22 +25,37 @@ h1, h2, h3 {
     padding: 0;
 }
 
+h1 {
+    font-family: $header-font;
+    line-height: 44px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: $header-font;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
 .container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        width: calc(100vw - 20%);
+    }
 
     &__header {
         color: #f4f4f4;
     }
 
     &__panel {
-        margin-left: 20px;
-        margin-right: 20px;
         background: #f4f4f4;
         padding: 15px;
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+        margin-top: 20px;
     }
 }
 
