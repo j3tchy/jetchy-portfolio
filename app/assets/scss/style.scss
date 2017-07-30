@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Anton');
+ @import url('https://fonts.googleapis.com/css?family=Anton|Raleway');
 
-$screen-min-sm: 'screen (min-width: 768px)';
-$screen-min-md: 'screen (min-width: 1024px)';
-$screen-min-lg: 'screen (min-width: 1360px)';
+$screen-min-sm: 'screen and (min-width: 768px)';
+$screen-min-md: 'screen and (min-width: 1024px)';
+$screen-min-lg: 'screen and (min-width: 1360px)';
 
 $header-font: 'Anton', sans-serif;
+$body-font: 'Raleway', sans-serif;
 
 *,
 *:before,
@@ -18,6 +19,8 @@ body {
     line-height: 22px;
     -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-family: $body-font;
 }
 
 h1, h2, h3 {
@@ -29,6 +32,7 @@ h1 {
     font-family: $header-font;
     line-height: 44px;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 h2 {
@@ -38,6 +42,8 @@ h2 {
 }
 
 .container {
+    position: relative;
+
     &__wrapper {
         display: flex;
         justify-content: center;
@@ -45,6 +51,10 @@ h2 {
         flex-direction: column;
         margin: 0 auto;
         width: calc(100vw - 20%);
+
+        @media #{$screen-min-sm} {
+            width: 600px;
+        }
     }
 
     &__header {
@@ -60,16 +70,21 @@ h2 {
 }
 
 #home {
-    background: rgba(3,40,83,1);
-    background: -moz-linear-gradient(-45deg, rgba(3,40,83,1) 0%, rgba(0,0,0,1) 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(3,40,83,1)), color-stop(100%, rgba(0,0,0,1)));
-    background: -webkit-linear-gradient(-45deg, rgba(3,40,83,1) 0%, rgba(0,0,0,1) 100%);
-    background: -o-linear-gradient(-45deg, rgba(3,40,83,1) 0%, rgba(0,0,0,1) 100%);
-    background: -ms-linear-gradient(-45deg, rgba(3,40,83,1) 0%, rgba(0,0,0,1) 100%);
-    background: linear-gradient(135deg, rgba(3,40,83,1) 0%, rgba(0,0,0,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#032853', endColorstr='#000000', GradientType=1 );
+    h1 {
+        color: rgba(3,40,83,1);
+        background-color: #ffffff;
+        padding: 10px;
+        font-size: 48px;
+    }
+
+    .container__wrapper {
+        width: 100vw;
+        height: 100vh;
+        border: 10px solid #ffffff;
+        background: rgba(3,40,83,1);
+    }
 }
 
 #skills {
-    background: green;
+    background: #f4f4f4;
 }
