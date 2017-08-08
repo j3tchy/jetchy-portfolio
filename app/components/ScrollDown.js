@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 function ScrollDown() {
     return (
-        <a className="scroll-down">
+        <a className="scroll-down" href="#">
+            <i className="fa fa-level-down"></i>
             Scroll down
-            <i className="fa fa-bath"></i>
         </a>
     )
 }

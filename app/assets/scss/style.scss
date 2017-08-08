@@ -3,8 +3,8 @@
 ****************************/
 @import url('https://fonts.googleapis.com/css?family=Anton|Raleway');
 
-// $fa-font-path: '../../../fonts';
-@import url('~font-awesome/scss/font-awesome.scss');
+$fa-font-path: '~font-awesome/fonts';
+@import '~font-awesome/scss/font-awesome.scss';
 
 $screen-min-sm: 'screen and (min-width: 768px)';
 $screen-min-md: 'screen and (min-width: 1024px)';
@@ -32,6 +32,7 @@ body {
     font-weight: 400;
     font-family: $body-font;
     position: relative;
+    font-size: 16px;
 }
 
 #page-wrapper {
@@ -104,6 +105,21 @@ p {
     width: auto;
     height: auto;
     color: #f4f4f4;
+    text-decoration: none;
+
+    i {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 2.5em;
+        opacity: 0.8;
+    }
+
+    &:hover {
+        i {
+            opacity: 1;
+        }
+    }
 }
 
 /****************************
@@ -124,12 +140,18 @@ p {
             bottom: 0;
             left: 0;
             width: 0;
-            border-top: 50px solid transparent;
-            border-left: 50px solid #282B37;
+            border-top: 40px solid transparent;
+            border-left: 40px solid #282B37;
         }
 
         span {
             line-height: 0.9;
+        }
+
+        &--small {
+            color: #ffffff;
+            text-align: right;
+            font-size: 1em;
         }
     }
 
@@ -144,7 +166,9 @@ p {
     Latest Work
 ****************************/
 
-.latestWork {};
+.latestWork {
+    background-color: #f4f4f4;
+};
 
 /****************************
     Navigation
@@ -161,7 +185,6 @@ p {
     background-color: #ffffff;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 3px rgba(0,0,0,0.5);
 
     &__list {
         margin: 0;

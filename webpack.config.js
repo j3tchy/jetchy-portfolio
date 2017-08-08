@@ -45,7 +45,8 @@ var config = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        name: '[name].[ext]'
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/'
                     }
                 }]
             }
