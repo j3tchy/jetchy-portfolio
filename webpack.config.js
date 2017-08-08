@@ -34,14 +34,32 @@ var config = {
                         'css-loader'
                     ]
                 })
+            },{
+                test: require.resolve('bigtext/src/bigtext'),
+                use: [{
+                    loader: 'expose-loader',
+                    options: 'bigtext'
+                }]
+            },{
+                test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]'
+                    }
+                }]
             }
         ]
     },
     plugins: [
-        new ExtractTextPlugin('css/style.css'),
+        new ExtractTextPlugin('style-[hash].css'),
         new HtmlWebpackPlugin({
             title: 'Jermaine Gyekye | Portfolio',
             template: 'app/index.html'
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
         })
     ]
 }

@@ -5,7 +5,7 @@ import App from './components/App';
 
 import styles from './assets/scss/style.scss';
 
-// import 
+// import
 
 ReactDOM.render(
     <App />,

@@ -1,14 +1,26 @@
 import React, { Component } from 'react';
 
-function Home() {
-    return (
-        <div id="home" className="section container">
-            <div className="container__wrapper">
-                <header className="container__header">
-                </header>
+import bigtext from 'bigtext/src/bigtext';
+import ScrollDown from './ScrollDown';
+
+class Home extends Component {
+    componentDidMount() {
+        $('.home__main-header').bigtext();
+    }
+
+    render() {
+        return (
+            <div id="home" className="section container home">
+                <div className="container__wrapper">
+                    <h1 className="home__main-header">
+                        <span>Title111</span>
+                        <span>Title1</span>
+                    </h1>
+                    <ScrollDown />
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default Home;

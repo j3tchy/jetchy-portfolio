@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
 
-import Home from './Home';
-import Skills from './Skills';
+import Nav from './Nav';
 
-import $ from 'jquery';
+import Home from './Home';
+import LatestWork from './LatestWork';
+
 import fullpage from 'fullpage.js/dist/jquery.fullpage.js';
 
 class App extends Component {
 
     componentDidMount() {
-        $('#fullpage').fullpage();
+        $('.main-content').fullpage();
     }
 
     render() {
         return (
-            <div id="fullpage">
-                <Home />
-                <Skills />
+            <div id="page-wrapper">
+                <Nav />
+                <div className="main-content" id="main-content">
+                    <Home />
+                    <LatestWork />
+                </div>
             </div>
         )
     }

@@ -1,4 +1,10 @@
- @import url('https://fonts.googleapis.com/css?family=Anton|Raleway');
+/****************************
+    Imports
+****************************/
+@import url('https://fonts.googleapis.com/css?family=Anton|Raleway');
+
+// $fa-font-path: '../../../fonts';
+@import url('~font-awesome/scss/font-awesome.scss');
 
 $screen-min-sm: 'screen and (min-width: 768px)';
 $screen-min-md: 'screen and (min-width: 1024px)';
@@ -6,6 +12,10 @@ $screen-min-lg: 'screen and (min-width: 1360px)';
 
 $header-font: 'Anton', sans-serif;
 $body-font: 'Raleway', sans-serif;
+
+/****************************
+    Site Wide
+****************************/
 
 *,
 *:before,
@@ -21,6 +31,11 @@ body {
 	-moz-osx-font-smoothing: grayscale;
     font-weight: 400;
     font-family: $body-font;
+    position: relative;
+}
+
+#page-wrapper {
+    padding-top: 50px;
 }
 
 h1, h2, h3 {
@@ -40,6 +55,14 @@ h2 {
     line-height: 22px;
     text-transform: uppercase;
 }
+
+p {
+    margin: 0 0 22px;
+}
+
+/****************************
+    Main Container
+****************************/
 
 .container {
     position: relative;
@@ -69,22 +92,88 @@ h2 {
     }
 }
 
-#home {
-    h1 {
-        color: rgba(3,40,83,1);
+/****************************
+    Helpers
+****************************/
+
+.scroll-down {
+    position: absolute;
+    bottom: 80px;
+    transform: translateX(-50%);
+    left: 50%;
+    width: auto;
+    height: auto;
+    color: #f4f4f4;
+}
+
+/****************************
+    Home
+****************************/
+
+.home {
+    &__main-header {
+        color: #282b37;
         background-color: #ffffff;
         padding: 10px;
         font-size: 48px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            border-top: 50px solid transparent;
+            border-left: 50px solid #282B37;
+        }
+
+        span {
+            line-height: 0.9;
+        }
     }
 
     .container__wrapper {
         width: 100vw;
-        height: 100vh;
-        border: 10px solid #ffffff;
-        background: rgba(3,40,83,1);
+        height: 100%;
+        background-color: #282b37;
     }
 }
 
-#skills {
-    background: #f4f4f4;
+/****************************
+    Latest Work
+****************************/
+
+.latestWork {};
+
+/****************************
+    Navigation
+****************************/
+
+.main-navigation {
+    position: fixed;
+    height: 50px;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        width: calc(100vw - 50px);
+        margin: 0 auto;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+
+        &-item {
+            display: inline-block;
+        }
+    }
 }
