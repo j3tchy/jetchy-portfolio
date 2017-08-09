@@ -24,6 +24,10 @@ $body-font: 'Raleway', sans-serif;
     width: 0;
     border-top: 40px solid transparent;
     border-left: 40px solid $colour;
+
+    @media #{$screen-min-sm} {
+        border-width: 60px;
+    }
 }
 
 /****************************
@@ -155,12 +159,13 @@ p {
     &__main-header {
         color: #282b37;
         background-color: #ffffff;
-        padding: 10px;
         font-size: 3em;
+        padding: 18px 10px 10px;
         position: relative;
 
         @media #{$screen-min-sm} {
             font-size: 5.000em;
+            padding: 20px 10px 10px;
         }
 
         &:before {
@@ -168,7 +173,8 @@ p {
         }
 
         span {
-            line-height: 0.9;
+            line-height: 0.95;
+            //line-height: 0.9;
         }
 
         &--small {

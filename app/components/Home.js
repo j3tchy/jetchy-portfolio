@@ -15,8 +15,8 @@ class Home extends Component {
                     <div className="home__main-header-wrapper-outer">
                         <div className="home__main-header-wrapper-inner">
                             <h1 className="home__main-header">
-                                <span>Title111</span>
-                                <span>Title1</span>
+                                <span>Jermaine</span>
+                                <span>Gyekye</span>
                             </h1>
                             <p className="home__main-header--small">Front end developer</p>
                         </div>
