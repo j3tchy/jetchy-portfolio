@@ -41,6 +41,15 @@ var config = {
                     options: 'bigtext'
                 }]
             },{
+                test: require.resolve('jquery'),
+                use: [{
+                    loader: 'expose-loader',
+                    options: '$'
+                },{
+                    loader: 'expose-loader',
+                    options: 'jQuery'
+                }]
+            },{
                 test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
                 use: [{
                     loader: 'file-loader',

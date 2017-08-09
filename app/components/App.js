@@ -8,11 +8,6 @@ import LatestWork from './LatestWork';
 import fullpage from 'fullpage.js/dist/jquery.fullpage.js';
 
 class App extends Component {
-
-    componentDidMount() {
-        $('.main-content').fullpage();
-    }
-
     render() {
         return (
             <div id="page-wrapper">

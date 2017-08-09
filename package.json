@@ -39,6 +39,7 @@
     "font-awesome": "^4.7.0",
     "fullpage.js": "^2.9.4",
     "jquery": "^3.2.1",
+    "jquery-lazy": "^1.7.5",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   }
