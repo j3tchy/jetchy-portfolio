@@ -61,6 +61,9 @@ var config = {
             }
         ]
     },
+    devServer: {
+        historyApiFallback: true
+    },
     plugins: [
         new ExtractTextPlugin('style-[hash].css'),
         new HtmlWebpackPlugin({

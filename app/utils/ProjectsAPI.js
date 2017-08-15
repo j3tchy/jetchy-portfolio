@@ -25,7 +25,6 @@ const ProjectsAPI = {
     all: function() { return this.projects },
     get: function(id) {
         const isProject = p => p.id === id
-        console.log(isProject);
         return this.projects.find(isProject)
     }
 }

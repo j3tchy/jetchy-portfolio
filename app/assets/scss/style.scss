@@ -87,6 +87,10 @@ p {
 /****************************
     Main Container
 ****************************/
+.main-content {
+    padding-top: 70px;
+}
+
 
 .container {
     position: relative;
@@ -157,6 +161,7 @@ p {
 
 .home {
     background-color: $brand-color-1;
+    margin-top: -70px;
 
     &__main-header {
         color: $brand-color-1;
@@ -430,5 +435,34 @@ p {
                 }
             }
         }
+    }
+}
+
+/****************************
+    Projects
+****************************/
+
+.projects {
+    &__header {
+        background: transparent url(https://placehold.it/2400x500) no-repeat center center;
+        background-size: cover;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            text-align: center;
+        }
+    }
+
+    .container__wrapper {
+        height: auto;
+        display: block;
+    }
+
+    &__summary {
+        padding: 30px 0;
     }
 }
