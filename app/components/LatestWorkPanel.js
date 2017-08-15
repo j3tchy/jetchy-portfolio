@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
 
-class LatestWorkPanel extends Component {
-    constructor(props) {
-        super(props);
-    }
+import { Link } from 'react-router-dom';
 
-    render() {
-        return (
-            <div className="latestWork__image-wrapper">
-                <img className="lazy" src="http://placehold.it/960x500" className="latestWork__image img-responsive" />
-                <div className="latestWork__image-title">
-                    {this.props.title}
-                </div>
-            </div>
-        )
-    }
+import ProjectsAPI from '../utils/ProjectsAPI';
+
+function LatestWorkPanel() {
+    return (
+        <div className="latestWork__image-panel">
+            {
+                ProjectsAPI.all().map(function(data) {
+                    return (
+                        <div key={data.id} className="latestWork__image-wrapper">
+                            <Link to={"/projects/" + data.id}>
+                                <img className="lazy" src="http://placehold.it/960x500" className="latestWork__image img-responsive" />
+                                <div className="latestWork__image-title">
+                                    {data.title}
+                                </div>
+                            </Link>
+                        </div>
+                    )
+                })
+            }
+        </div>
+
+    )
 }
 
 
