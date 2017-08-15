@@ -13,6 +13,8 @@ $screen-min-lg: 'screen and (min-width: 1360px)';
 $header-font: 'Anton', sans-serif;
 $body-font: 'Raleway', sans-serif;
 
+$brand-color-1: #282b37;
+
 /****************************
     Mixin
 ****************************/
@@ -150,10 +152,10 @@ p {
 ****************************/
 
 .home {
-    background-color: #282b37;
+    background-color: $brand-color-1;
 
     &__main-header {
-        color: #282b37;
+        color: $brand-color-1;
         background-color: #ffffff;
         padding: 10px;
         font-size: 3em;
@@ -164,7 +166,7 @@ p {
         }
 
         &:before {
-            @include cutout-corner(#282B37);
+            @include cutout-corner($brand-color-1);
         }
 
         span {
@@ -240,6 +242,8 @@ p {
         }
 
         &-panel {
+            margin-bottom: 75px;
+
             @media #{$screen-min-md} {
                 padding-bottom: 50px;
             }
@@ -363,6 +367,60 @@ p {
                     -moz-transform: rotate(-135deg);
                     -o-transform: rotate(-135deg);
                     transform: rotate(-135deg);
+                }
+            }
+        }
+    }
+}
+
+/****************************
+    Social Media
+****************************/
+
+.social-media {
+    background-color: $brand-color-1;
+    padding: 30px 0;
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: calc(100% - 50%);
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+
+        @media #{$screen-min-sm} {
+            width: 250px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 20px;
+        width: 50%;
+        padding: 10px;
+
+        @media #{$screen-min-sm} {
+            width: 25%;
+            margin-bottom: 0;
+            padding: 0 10px;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+            .social-media__icon {
+
+                path {
+                    fill: #000000;
+                    transition: 0.5s;
+                }
+
+                &:hover path {
+                    fill: #cccccc;
                 }
             }
         }

@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
 
-import Lazy from 'jquery-lazy';
-
 class LatestWorkPanel extends Component {
     constructor(props) {
         super(props);
-    }
-
-    componentDidMount() {
-        // $('.lazy').Lazy();
     }
 
     render() {
