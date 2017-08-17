@@ -9,6 +9,15 @@ class Nav extends Component {
         }
     }
 
+    componentDidMount() {
+        var $menuParentIcon = $('.main-navigation');
+
+        $('.main-navigation__list').click(function(e) {
+            e.preventDefault();
+            $menuParentIcon.toggleClass('open');
+        })
+    }
+
     toggleOpenClass() {
         const currentState = this.state.open;
         this.setState({
@@ -30,10 +39,14 @@ class Nav extends Component {
                             <span></span>
                         </div>
                     </div>
+                    <ul className="main-navigation__links">
+                        <li className="main-navigation__links-item">Home</li>
+                        <li className="main-navigation__links-item">Projects</li>
+                    </ul>
                 </div>
             </nav>
         )
     }
 }
 
-export default Nav;
+export default Nav

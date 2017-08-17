@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Home from './Home';
-import Projects from './Projects';
+import Project from './Project';
 
 function Main() {
     return (
         <div className="main-content" id="main-content">
             <Switch>
                 <Route exact path='/' component={Home} />
-                <Route path='/projects/:id' component={Projects} />
+                <Route path='/projects/:id' component={Project} />
             </Switch>
         </div>
     )
 }
 
-export default Main;
+export default Main

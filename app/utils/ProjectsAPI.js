@@ -4,21 +4,25 @@ const ProjectsAPI = {
             id: 1,
             title: 'Summer Sixteen',
             summary: 'Lorem lipsum',
+            websiteImg: '../assets/images/bbc-situ.jpg',
             slug: 'summer-sixteen'
          },{
             id: 2,
             title: 'Love Yourz',
             summary: 'J Cole',
+            websiteImg: '../assets/images/bbc-situ.jpg',
             slug: 'love-yourz'
          },{
             id: 3,
             title: 'Tripping',
-            summary: 'French Montana',
+            summary: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which.',
+            websiteImg: '../assets/images/bbc-situ.jpg',
             slug: 'tripping'
          },{
             id: 4,
             title: 'Outburst004',
             summary: 'Manga',
+            websiteImg: '../assets/images/bbc-situ.jpg',
             slug: 'outburst004'
         }
     ],

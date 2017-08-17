@@ -7,7 +7,7 @@ import App from './components/App';
 
 import styles from './assets/scss/style.scss';
 
-// import
+import TrippingSite from './assets/images/bbc-situ.jpg';
 
 ReactDOM.render(
     <BrowserRouter>

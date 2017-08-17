@@ -1,7 +1,4 @@
-import React, { Component } from 'react';
-
-import bigtext from 'bigtext/src/bigtext';
-import ScrollDown from './ScrollDown';
+import React from 'react';
 
 import Intro from './Intro';
 import LatestWork from './LatestWork';
@@ -15,6 +12,6 @@ function Home() {
             <Social />
         </div>
     )
-} 
+}
 
-export default Home;
+export default Home

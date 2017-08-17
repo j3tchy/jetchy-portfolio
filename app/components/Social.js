@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 function Social() {
     return (
@@ -29,4 +29,4 @@ function Social() {
     )
 }
 
-export default Social;
+export default Social

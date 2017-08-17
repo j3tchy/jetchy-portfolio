@@ -4,6 +4,10 @@ import bigtext from 'bigtext/src/bigtext';
 import ScrollDown from './ScrollDown';
 
 class Intro extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     componentDidMount() {
         $('.home__main-header').bigtext();
     }
@@ -29,4 +33,4 @@ class Intro extends Component {
     }
 }
 
-export default Intro;
+export default Intro

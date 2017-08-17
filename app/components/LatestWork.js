@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import LatestWorkPanel from './LatestWorkPanel';
 
@@ -16,4 +16,4 @@ function LatestWork() {
     )
 }
 
-export default LatestWork;
+export default LatestWork

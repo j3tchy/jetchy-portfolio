@@ -88,7 +88,7 @@ p {
     Main Container
 ****************************/
 .main-content {
-    padding-top: 70px;
+    padding-top: 68px;
 }
 
 
@@ -293,24 +293,47 @@ p {
 
 .main-navigation {
     position: fixed;
-    height: 68px;
+    max-height: 68px;
     width: 100vw;
     top: 0;
     left: 0;
     right: 0;
     z-index: 2;
     background-color: #ffffff;
-    display: flex;
     align-items: center;
+    padding-top: 15px;
+    overflow: hidden;
+
 
     .container__wrapper {
         min-height: auto;
+    }
+
+    &.open {
+        max-height: 200px;
+        transition: max-height 0.5 ease-in;
     }
 
     &__wrapper {
         display: flex;
         justify-content: flex-end;
         width: 100%;
+        padding-bottom: 10px;
+    }
+
+    &__links {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+        text-align: center;
+
+        &-item {
+            line-height: 2.5;
+            text-transform: uppercase;
+            font-family: $header-font;
+            font-size: 1.5em;
+        }
     }
 
     &__list {
@@ -444,7 +467,10 @@ p {
 
 .projects {
     &__header {
-        background: transparent url(https://placehold.it/2400x500) no-repeat center center;
+        background-image: url('https://placehold.it/2400x500');
+        background-color: rgba(255, 255, 255, 0.8);
+        background-repeat: no-repeat;
+        background-position: center center;
         background-size: cover;
         height: 500px;
         display: flex;
@@ -452,8 +478,16 @@ p {
         justify-content: center;
         align-items: center;
 
+        &.tripping {
+            background-image: url('../images/bbc-situ.jpg');
+        }
+
         h1 {
             text-align: center;
+            background-color: rgba(255, 255, 255, 1);
+            padding: 10px;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+            // @include cutout-corner('transparent');
         }
     }
 

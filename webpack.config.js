@@ -50,12 +50,20 @@ var config = {
                     options: 'jQuery'
                 }]
             },{
-                test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
                 use: [{
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
                         outputPath: 'fonts/'
+                    }
+                }]
+            },{
+                test: /\.(jpe?g|png|gif)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 0
                     }
                 }]
             }
